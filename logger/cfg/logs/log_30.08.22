@@ -1,0 +1,4 @@
+[12:45:00] Отправил запрос github.com
+[12:45:00] <Request 200>, Все гуд
+[12:45:00] KeyError a[i:10] no such key
+[12:45:00] Restarting...
