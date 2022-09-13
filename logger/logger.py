@@ -3,6 +3,7 @@ import datetime
 import traceback
 
 
+
 class SingletonBase(type):
     _instances = {}
 
@@ -28,7 +29,7 @@ class Logger(metaclass=SingletonBase):
         
         try:
             assert self._path != '', f'Неверный путь к файлу в инициализации path="{self._path}"'
-            assert isinstance(self._path, str), 'Неверный формат пути к директории'
+            assert isinstance(self._path, str), f'Неверный формат пути к директории, {self._path}: {type(self._path)}'
             if not f'log_{self._day}.{self._month}.{self._year[2:]}' in os.listdir(path=self._path):
                 with open(self._current_file(), 'w') as f:
                     f.write('')
